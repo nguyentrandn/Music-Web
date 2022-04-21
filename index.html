@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,24 +18,23 @@
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
-    <div class="container-fluid px-1">
+    <div class="container-fluid px-1 box-body">
         <!-- -------------------------- -->
         <div class="head gx-5">
-            <div class="btn-darkmode mt-3 ms-1 align-self-start"><ion-icon name="moon"></ion-icon></div>
+            <div class="btn-darkmode mt-3 ms-1 align-self-start">
+                <ion-icon name="moon"></ion-icon>
+            </div>
             <div class=" col mt-3 img_backgound mx-2"></div>
             <div class=" menue mt-3 me-1 align-self-start">
                 <div id="btn-menue">
-                    <lord-icon
-                        src="https://cdn.lordicon.com/jtqpkhoh.json"
-                        trigger="click"
-                        style="width:50px;height:50px">
-                    </lord-icon>
+                    <ion-icon name="menu"></ion-icon>
                 </div>
                 <div class="overlay"></div>
                 <div class="menu-list">
                     <ul>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -60,21 +60,21 @@
             </div>
             <div class="col col-md-2 music-name align-self-center"><label for="">Party lore</label></div>
         </div>
-        
+
         <div class="overlay"></div>
     </div>
     <script src="./index.js"></script>
     <script>
-        $(document).ready(function () {
-            $("#btn-menue").click(function () {
+        $(document).ready(function() {
+            $("#btn-menue").click(function() {
                 $(".menu-list").toggleClass("menue-active");
                 $(".overlay").toggleClass("overlay-active");
             })
-            $(".overlay").click(function (e) { 
+            $(".overlay").click(function(e) {
                 $(".menu-list").toggleClass("menue-active");
                 $(".overlay").toggleClass("overlay-active");
             });
-            $(".btn-darkmode").click(function () {
+            $(".btn-darkmode").click(function() {
                 $(this).toggleClass("btn-dark");
                 $(".container-fluid").toggleClass("darkmode-active");
                 $(".menu-list").toggleClass("menu-dark")
@@ -83,6 +83,7 @@
             })
         });
     </script>
-    
+
 </body>
+
 </html>
