@@ -18,40 +18,50 @@
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <div class="container-fluid content">
-        <div class="btn-darkmode"><ion-icon name="moon"></ion-icon></div>
-        <div class="img_backgound"></div>
-        <audio src="" id="audio"></audio>
-        <div class="btn-prev bt">
-            <ion-icon name="arrow-dropleft"></ion-icon>
+    <div class="container-fluid px-1">
+        <!-- -------------------------- -->
+        <div class="head gx-5">
+            <div class="btn-darkmode mt-3 ms-1 align-self-start"><ion-icon name="moon"></ion-icon></div>
+            <div class=" col mt-3 img_backgound mx-2"></div>
+            <div class=" menue mt-3 me-1 align-self-start">
+                <div id="btn-menue">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/jtqpkhoh.json"
+                        trigger="click"
+                        style="width:50px;height:50px">
+                    </lord-icon>
+                </div>
+                <div class="overlay"></div>
+                <div class="menu-list">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="btn-next bt">
-            <ion-icon name="arrow-dropright"></ion-icon>
+        <!-- -------------------------- -->
+        <div class="control row justify-content-around">
+            <audio src="" id="audio" hidden></audio>
+            <!--  -->
+            <div class="col col-md-2 col-sm-3 input-range align-self-center">
+                <input type="range" name="range" id="range" value="0" step="1" min="0" max="100">
+                <label for="" id="time">3:00</label>
+            </div>
+            <div class="col group-btn ">
+                <div class=" btn-prev bt">
+                    <ion-icon name="arrow-dropleft"></ion-icon>
+                </div>
+                <div class=" btn-play bt">
+                    <ion-icon id="player" name="play-circle"></ion-icon>
+                </div>
+                <div class=" btn-next bt">
+                    <ion-icon name="arrow-dropright"></ion-icon>
+                </div>
+            </div>
+            <div class="col col-md-2 music-name align-self-center"><label for="">Party lore</label></div>
         </div>
-        <div class="btn-play bt">
-            <ion-icon id="player" name="play-circle"></ion-icon>
-        </div>
-        <div class="input-range ">
-            <input type="range" name="range" id="range" value="0" step="1" min="0" max="100">
-            <label for="" id="time">3:00</label>
-        </div>
+        
         <div class="overlay"></div>
-        <div class="music-name"><label for="">Party lore</label></div>
-        <div class="menue">
-            <div id="btn-menue">
-                <lord-icon
-                    src="https://cdn.lordicon.com/jtqpkhoh.json"
-                    trigger="click"
-                    style="width:50px;height:50px">
-                </lord-icon>
-            </div>
-            <div class="overlay"></div>
-            <div class="menu-list">
-                <ul>
-                    
-                </ul>
-            </div>
-        </div>
     </div>
     <script src="./index.js"></script>
     <script>
@@ -66,10 +76,10 @@
             });
             $(".btn-darkmode").click(function () {
                 $(this).toggleClass("btn-dark");
-                $(".content").toggleClass("darkmode-active");
-                $("lord-icon").toggleClass("menu-dark")
+                $(".container-fluid").toggleClass("darkmode-active");
+                $(".menu-list").toggleClass("menu-dark")
                 $(".bt").toggleClass("btn-dark");
-                
+                $()
             })
         });
     </script>
