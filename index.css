@@ -227,7 +227,7 @@ input[type=range]::-webkit-slider-thumb {
     opacity: 0.8;
     position: absolute;
     right: 1%;
-    top: 10%;
+    top: 90px;
     box-shadow: 1px 1px 5px 0px #888888;
     padding: 20px 0;
     overflow-y: scroll;
@@ -394,5 +394,8 @@ input[type=range]::-webkit-slider-thumb {
     .group-btn {
         position: absolute;
         bottom: 15%;
+    }
+    .menu-list{
+        height: 300px;
     }
 }

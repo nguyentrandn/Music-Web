@@ -212,7 +212,7 @@ const app = {
                 }
             };
         }
-
+        // click vao Menu
         btnMenu.onclick = function() {
             let check = $$(".menue-active")
             if (!check) {
@@ -227,7 +227,7 @@ const app = {
                 behavior: 'smooth',
                 block: 'center'
             })
-        }, 500);
+        }, 1000);
     },
     nextSong: function() {
         this.currentIndex++
